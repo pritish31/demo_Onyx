@@ -1,0 +1,187 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "login_interaction_flow",
+        "label": "Login Interaction Flow",
+        "nodes": [
+          "index_login_form",
+          "script_submit_logic",
+          "index_message_container"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "script.js"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "script.js",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "id": "script_js",
+      "community": 3,
+      "norm_label": "script.js"
+    },
+    {
+      "label": "Login Form",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": "21-47",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_login_form",
+      "community": 0,
+      "norm_label": "login form"
+    },
+    {
+      "label": "Password Input",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": "27",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_password_field",
+      "community": 0,
+      "norm_label": "password input"
+    },
+    {
+      "label": "Password Toggle Button",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": "28",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_toggle_btn",
+      "community": 1,
+      "norm_label": "password toggle button"
+    },
+    {
+      "label": "Status Message Container",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": "46",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "index_message_container",
+      "community": 2,
+      "norm_label": "status message container"
+    },
+    {
+      "label": "Password Toggle Logic",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "6-10",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "script_toggle_logic",
+      "community": 1,
+      "norm_label": "password toggle logic"
+    },
+    {
+      "label": "Form Submission Logic",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "12-16",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "script_submit_logic",
+      "community": 2,
+      "norm_label": "form submission logic"
+    }
+  ],
+  "links": [
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "script.js",
+      "source_location": "12",
+      "weight": 1.0,
+      "_src": "script_submit_logic",
+      "_tgt": "index_login_form",
+      "source": "index_login_form",
+      "target": "script_submit_logic"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": "21-27",
+      "weight": 1.0,
+      "_src": "index_login_form",
+      "_tgt": "index_password_field",
+      "source": "index_login_form",
+      "target": "index_password_field"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "script.js",
+      "source_location": "7-8",
+      "weight": 1.0,
+      "_src": "script_toggle_logic",
+      "_tgt": "index_password_field",
+      "source": "index_password_field",
+      "target": "script_toggle_logic"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "script.js",
+      "source_location": "6",
+      "weight": 1.0,
+      "_src": "script_toggle_logic",
+      "_tgt": "index_toggle_btn",
+      "source": "index_toggle_btn",
+      "target": "script_toggle_logic"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "script.js",
+      "source_location": "15",
+      "weight": 1.0,
+      "_src": "script_submit_logic",
+      "_tgt": "index_message_container",
+      "source": "index_message_container",
+      "target": "script_submit_logic"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "login_interaction_flow",
+      "label": "Login Interaction Flow",
+      "nodes": [
+        "index_login_form",
+        "script_submit_logic",
+        "index_message_container"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "script.js"
+    }
+  ]
+}
